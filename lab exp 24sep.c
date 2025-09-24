@@ -12,7 +12,7 @@ int main()
     {if (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
       {count++;}  
     }
-    printf("Total number of words: %d\n", count + 1);
+    printf("Total no. of words: %d\n", count + 1);
     return 0;
 }
 
@@ -53,7 +53,7 @@ int main() {
             str[i] = str[i] + ('a' - 'A');
         }
     }
-    printf("Modified sentence: %s", str);
+    printf("sentence: %s", str);
     return 0;
 }
 
