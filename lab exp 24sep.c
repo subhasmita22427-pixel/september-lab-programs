@@ -65,9 +65,7 @@ int main()
   int i, len, flag = 0;
   printf("Enter a string: ");
   fgets(str, sizeof(str), stdin);
-  // Calculate the length of the string
   for(len = 0; str[len] != '\0'; len++);
-  // Check for palindrome
   for(i = 0; i < len / 2; i++) 
   {if(str[i] != str[len - i - 1]) 
     {flag = 1;
