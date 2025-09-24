@@ -86,21 +86,18 @@ int main()
     int i = 0, j = 0, maxLength = 0, length = 0;
     printf("Enter a sentence: ");
     fgets(str, sizeof(str), stdin);
-    while (1) {
-        if (str[i] != ' ' && str[i] != '\0' && str[i] != '\n') 
+    while (1)
+        {if (str[i] != ' ' && str[i] != '\0' && str[i] != '\n') 
             {word[j++] = str[i]; } 
        else {if (j > maxLength) 
                { maxLength = j;
                 word[j] = '\0';
                 int k;
                 for (k = 0; k <= j; k++) 
-                  {  longest[k] = word[k]; }
-               } j = 0; } 
-            
+                  {  longest[k] = word[k]; }} j = 0; } 
         if (str[i] == '\0' || str[i] == '\n')
-            { break; }
+            { break;}
         i++;}
-    
-    printf("The longest word is: %s\n", longest);
+    printf("The longest word: %s\n", longest);
     return 0;
 }
