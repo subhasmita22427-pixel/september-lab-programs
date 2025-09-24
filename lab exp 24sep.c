@@ -19,19 +19,19 @@ int main()
 que2
 //Write a program in C to count the total number of alphabets, digits and special characters in a string.
 #include <stdio.h>
-int main() {
+int main() 
+{
     char str[100];
     int i, alphabets = 0, digits = 0, specialChars = 0;
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
     for(i = 0; str[i] != '\0'; i++) {
-        if((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z')) {
-            alphabets++;
-        } else if(str[i] >= '0' && str[i] <= '9') {
-            digits++;
-        } else if(str[i] != ' ' && str[i] != '\n') {
-            specialChars++;
-        }
+        if((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z')) 
+           { alphabets++;}
+         else if(str[i] >= '0' && str[i] <= '9') 
+           { digits++;}
+         else if(str[i] != ' ' && str[i] != '\n') 
+            {specialChars++;}
     }
     printf("Alphabets: %d\n", alphabets);
     printf("Digits: %d\n", digits);
@@ -42,7 +42,8 @@ int main() {
 que3
 //Write a program in C to read a sentence and replace lowercase characters with uppercase and vice versa.
 #include <stdio.h>
-int main() {
+int main() 
+{
     char str[100];
     printf("Enter a sentence: ");
     fgets(str, sizeof(str), stdin);
@@ -88,14 +89,14 @@ int main()
     while (1) {
         if (str[i] != ' ' && str[i] != '\0' && str[i] != '\n') 
             {word[j++] = str[i]; } 
-       else {
-            if (j > maxLength) 
+       else {if (j > maxLength) 
                { maxLength = j;
                 word[j] = '\0';
                 int k;
                 for (k = 0; k <= j; k++) 
                   {  longest[k] = word[k]; }
                } j = 0; } 
+            
         if (str[i] == '\0' || str[i] == '\n')
             { break; }
         i++;}
